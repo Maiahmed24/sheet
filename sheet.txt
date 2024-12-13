@@ -1,0 +1,159 @@
+Question 1: 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+   
+    int length = 10;
+
+     int arr[length];
+
+   cout << "Enter " << length << " values for the array:\n";
+    for (int i = 0; i < length; i++) {
+        cout << "Value " << i + 1 << ": ";
+        cin >> arr[i];
+    }
+
+   cout << "\nArray elements:\n";
+    for (int i = 0; i < length; i++) {
+        std::cout << arr[i] << " ";
+    }
+    cout << "\n";
+   cout << "\nArray elements in reverse:\n";
+    for (int i = length - 1; i >= 0; i--) {
+        std::cout << arr[i] << " ";
+    }
+    cout << "\n";
+
+    int sum = 0;
+    for (int i = 0; i < length; i++) {
+        sum += arr[i];
+    }
+    cout << "\nSummation of array elements: " << sum << "\n";
+
+    int product = 1;
+    for (int i = 0; i < length; i++) {
+        product *= arr[i];
+    }
+    cout << "\nProduct of array elements: " << product << "\n";
+
+    return 0;
+}
+
+
+_____________________________________________________________________________________
+
+Question 2:
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int rows = 3;
+    int cols = 3;
+    int matrix[rows][cols];
+    cout << "Enter " << rows << " x " << cols << " matrix values:\n";
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            cout << "Value at (" << i << ", " << j << "): ";
+            cin >> matrix[i][j];
+        }
+    }
+
+    
+    std::cout << "\nMatrix:\n";
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+           cout << matrix[i][j] << " ";
+        }
+       cout << "\n";
+    }
+   cout << "\nRow Summations:\n";
+    for (int i = 0; i < rows; i++) {
+        int rowSum = 0;
+        for (int j = 0; j < cols; j++) {
+            rowSum += matrix[i][j];
+        }
+       cout << "Row " << i + 1 << " summation: " << rowSum << "\n";
+    }
+
+    cout << "\nRow Products:\n";
+    for (int i = 0; i < rows; i++) {
+        int rowProduct = 1;
+        for (int j = 0; j < cols; j++) {
+            rowProduct *= matrix[i][j];
+        }
+       cout << "Row " << i + 1 << " product: " << rowProduct << "\n";
+    }
+
+    return 0;
+}
+
+_________________________________________________________________________________________
+
+Bonus: Question 3
+#include <iostream>
+using namespace std;
+int main() {
+    int rows = 3;
+    int cols = 4;
+    int matrix[rows][cols];
+
+    cout << "Enter " << rows << " x " << cols << " matrix values:\n";
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            cout << "Value at (" << i << ", " << j << "): ";
+            cin >> matrix[i][j];
+        }
+    }
+
+   cout << "\nOriginal Matrix:\n";
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+           cout << matrix[i][j] << " ";
+        }
+        cout << "\n";
+    }
+
+    int transpose[cols][rows];
+
+    for (int i = 0; i < cols; i++) {
+        for (int j = 0; j < rows; j++) {
+            transpose[i][j] = matrix[j][i];
+        }
+    }
+
+    cout << "\nTranspose Matrix:\n";
+    for (int i = 0; i < cols; i++) {
+        for (int j = 0; j < rows; j++) {
+            cout << transpose[i][j] << " ";
+        }
+        cout << "\n";
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
